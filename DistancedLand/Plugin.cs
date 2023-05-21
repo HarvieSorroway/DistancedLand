@@ -28,6 +28,8 @@ public class Plugin : BaseUnityPlugin
 
         On.Player.Update += Player_Update;
 
+        FakeWaterHooks.HookOn();
+
         LoadResources(self);
     }
 
@@ -43,10 +45,10 @@ public class Plugin : BaseUnityPlugin
     private void Player_Update(On.Player.orig_Update orig, Player self, bool eu)
     {
         orig.Invoke(self, eu);
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            self.room.AddObject(new FakeWater(self.room));
-        }
+        //if (Input.GetKeyDown(KeyCode.V))
+        //{
+        //    self.room.AddObject(new FakeWater(self.room));
+        //}
     }
 
 }
