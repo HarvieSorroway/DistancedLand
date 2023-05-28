@@ -39,12 +39,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomFix\CustomShelterDoorRule.cs" />
+    <Compile Include="CustomFix\RegionNameAndFastTravelFix.cs" />
+    <Compile Include="CustomFix\WarpFixer.cs" />
     <Compile Include="CustomObjects\FakeWater.cs" />
+    <Compile Include="LandScapeExpand\LandScapeExpand.cs" />
     <Compile Include="Plugin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="BepInEx">
       <HintPath>..\includings\BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="EmgTx">
+      <HintPath>..\..\EmgTx\EmgTx\bin\Debug\EmgTx.dll</HintPath>
     </Reference>
     <Reference Include="HOOKS-Assembly-CSharp">
       <HintPath>..\includings\HOOKS-Assembly-CSharp.dll</HintPath>
