@@ -8,6 +8,7 @@ using BepInEx;
 using DistancedLand.CustomFix;
 using DistancedLand.CustomObjects;
 using DistancedLand.LandScapeExpand;
+using Expedition;
 using UnityEngine;
 
 #pragma warning disable CS0618
@@ -38,6 +39,11 @@ public class Plugin : BaseUnityPlugin
         LandScapeExpand.HookOn();
 
         LoadResources(self);
+
+        //foreach(RainWorld.AchievementID achievement in Enum.GetValues(typeof(RainWorld.AchievementID)))
+        //{
+        //    self.processManager.CueAchievement(achievement, 1f);
+        //}
     }
 
     void LoadResources(RainWorld rainworld)
