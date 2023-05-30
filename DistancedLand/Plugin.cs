@@ -5,6 +5,7 @@ using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 using BepInEx;
+using DistancedLand;
 using DistancedLand.CustomFix;
 using DistancedLand.CustomObjects;
 using DistancedLand.LandScapeExpand;
@@ -29,7 +30,7 @@ public class Plugin : BaseUnityPlugin
         orig.Invoke(self);
         if (inited) return;
 
-        On.Player.Update += Player_Update;
+        //On.Player.Update += Player_Update;
 
         FakeWaterHooks.HookOn();
         CustomShelterDoorRule.HookOn();
@@ -38,6 +39,7 @@ public class Plugin : BaseUnityPlugin
         RegionNameAndFastTravelFix.HookOn();
         LandScapeExpand.HookOn();
 
+        Enums.Register();
         LoadResources(self);
 
         //foreach(RainWorld.AchievementID achievement in Enum.GetValues(typeof(RainWorld.AchievementID)))
