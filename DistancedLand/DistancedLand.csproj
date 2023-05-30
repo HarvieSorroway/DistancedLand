@@ -39,10 +39,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomCreatures\LizardHooks.cs" />
     <Compile Include="CustomFix\CustomShelterDoorRule.cs" />
     <Compile Include="CustomFix\RegionNameAndFastTravelFix.cs" />
     <Compile Include="CustomFix\WarpFixer.cs" />
     <Compile Include="CustomObjects\FakeWater.cs" />
+    <Compile Include="Enums.cs" />
     <Compile Include="LandScapeExpand\LandScapeExpand.cs" />
     <Compile Include="Plugin.cs" />
   </ItemGroup>
@@ -87,5 +89,6 @@
       <HintPath>..\includings\UnityEngine.InputLegacyModule.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
